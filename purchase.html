@@ -9,63 +9,103 @@
   <title>다이어리MBTI</title>
   <link rel="stylesheet" href="css/bootstrap.css">
   <style>
+    nav {
+      margin-bottom: 20px;
+
+    }
+
+    .jumbotron {
+      background-color: '#FFFFF0'
+    }
+
+    /* PC (해상도 1024px)*/
+    @media all and (min-width:1024px) {
+      .jumbotron {
+        margin: 30px;
+        margin-top: 100px;
+      }
+    }
+
+    /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+    @media all and (min-width:768px) and (max-width:1023px) {
+      .jumbotron {
+        margin: 15px;
+        margin-top: 70px;
+      }
+    }
+
+    /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+    @media all and (max-width:767px) {
+      .jumbotron {
+        margin: 5px;
+        margin-top: 70px;
+      }
+    }
+
+    #a1 {}
+
+    #a2 {}
   </style>
   <script>
   </script>
 
 <body>
 
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">한다</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="index.html">Test</a></li>
-            <li class="active"><a href="purchase.html">Shop</a></li>
-          </ul>
-        </div>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">한다</a>
       </div>
-    </nav>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Test</a></li>
+          <li class="active"><a href="purchase.html">Shop</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <div class="row">
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <img src="..." alt="...">
-          <div class="caption">
-            <h3>간단형 패키지 </h3>
-            <p>P형들에게 추천하는 축소형 다이어리 패키지 </p>
-            <p><a href="#" class="btn btn-primary" role="button">구매하기</a></p>
+  <div class="container">
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="..." alt="...">
+            <div class="caption">
+              <h3>간단형 패키지 </h3>
+              <p>P형들에게 추천하는 축소형 다이어리 패키지 </p>
+              <p><a href="#" class="btn btn-primary" role="button">구매하기</a></p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <img src="..." alt="...">
-          <div class="caption">
-            <h3>완전체 패키지</h3>
-            <p>J형들에게 추천하는 완전형 다이어리 패키지 </p>
-            <p><a href="#" class="btn btn-primary" role="button">구매하기</a></p>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="..." alt="...">
+            <div class="caption">
+              <h3>완전체 패키지</h3>
+              <p>J형들에게 추천하는 완전형 다이어리 패키지 </p>
+              <p><a href="#" class="btn btn-primary" role="button">구매하기</a></p>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
 
-<!--footer-->
-<div class="jumbotron text-center mt-5 mb-0">
-  <h3 class="text-secondary">한다</h3>
-  <p>다이어리 연구소, 다연의 MBTI성향별 다이어리 추천 서비스, 한다</p>
+  <!--footer-->
+  <div class="jumbotron text-center mt-5 mb-0">
+    <h3 class="text-secondary">한다</h3>
+    <p>다이어리 연구소, 다연의 MBTI성향별 다이어리 추천 서비스, 한다</p>
 
-  </body>
+</body>
 
-    </head>
+</head>
 
 </html>
