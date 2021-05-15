@@ -111,7 +111,7 @@
   </div>
   </div>
   <script type='text/javascript'>
-    var a = -1;
+    var a = 0;
     var i;
     var e = 0;
     var s = 0;
@@ -125,7 +125,7 @@
     }
 
     function q() {
-      if (a == 1) {
+    if (a == 1) {
         document.getElementById("t").style.display = "none";
         document.getElementById("tt").style.display = "none";
         document.getElementById("ttt").innerHTML = "오늘은 불금! 다들 나오라는데, 일요일까지 과제가 있다. 어떡할까?"
@@ -182,7 +182,7 @@
 
     function save(i) {
       console.log("순서a=%d,선택i=%d", a, i);
-      if (a == 1) {
+      if (a == 2) {
         console.log('J or P');
         if (i == 1) {
           j++;
@@ -190,37 +190,29 @@
         } else if (i == 2) {
           console.log('P');
         }
-      } else if (a == 2) {
+      } else if (a == 3) {
         console.log('S or N');
         if (i == 1) {
           s++;
           console.log('S');
         } else if (i == 2) {
           console.log('N');
-        }
-      } else if (a == 3) {
-        console.log('T or F');
-        if (i == 1) {
-          t++;
-          console.log('T');
-        } else if (i == 2) {
-          console.log('F');
         }
       } else if (a == 4) {
-        console.log('S or N');
-        if (i == 1) {
-          s++;
-          console.log('S');
-        } else if (i == 2) {
-          console.log('N');
-        }
-      } else if (a == 5) {
         console.log('T or F');
         if (i == 1) {
           t++;
           console.log('T');
         } else if (i == 2) {
           console.log('F');
+        }
+      } else if (a == 5) {
+        console.log('S or N');
+        if (i == 1) {
+          s++;
+          console.log('S');
+        } else if (i == 2) {
+          console.log('N');
         }
       } else if (a == 6) {
         console.log('T or F');
@@ -231,6 +223,14 @@
           console.log('F');
         }
       } else if (a == 7) {
+        console.log('T or F');
+        if (i == 1) {
+          t++;
+          console.log('T');
+        } else if (i == 2) {
+          console.log('F');
+        }
+      } else if (a == 8) {
         console.log('J or P');
         if (i == 1) {
           j++;
@@ -238,7 +238,7 @@
         } else if (i == 2) {
           console.log('P');
         }
-      } else if (a == 8) {
+      } else if (a == 9) {
         console.log('E or I');
         if (i == 1) {
           console.log('I');
@@ -246,7 +246,7 @@
           e++;
           console.log('E');
         }
-      } else if (a == 9) {
+      } else if (a == 10) {
         console.log('J or P');
         if (i == 1) {
           console.log('P');
@@ -254,7 +254,7 @@
           j++;
           console.log('J');
         }
-      } else if (a == 10) {
+      } else if (a == 11) {
         console.log('S or N');
         if (i == 1) {
           console.log('N');
@@ -262,7 +262,7 @@
           s++;
           console.log('S');
         }
-      } else if (a == 11) {
+      } else if (a == 12) {
         console.log('E or I');
         if (i == 1) {
           console.log('I');
@@ -270,7 +270,7 @@
           e++;
           console.log('E');
         }
-      } else if (a == 12) {
+      } else if (a == 13) {
         console.log('E or I');
         if (i == 1) {
           console.log('I');
