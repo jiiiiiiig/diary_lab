@@ -8,25 +8,38 @@
   <title>다이어리MBTI</title>
   <link rel="stylesheet" href="css/bootstrap.css">
   <style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+  }
 
-  
     nav {
       margin-bottom: 20px;
-
     }
 
-    /*
-    .jumbotron {
-      margin: 30px;
-      margin-top: 100px;
-      padding: 0px;
-    }*/
+    .test{
+      margin: 20px;
+      padding: 10px;
+    }
 
+    #a1{
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 300;
+      padding: 10px;
+    }
+    #a2{
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 300;
+      padding: 10px;
+    }
     /* PC (해상도 1024px)*/
     @media all and (min-width:1024px) {
       .jumbotron {
         margin: 30px;
         margin-top: 100px;
+      }
+      .test{
+        margin: 40px;
       }
     }
 
@@ -46,9 +59,6 @@
       }
     }
 
-    #a1 {}
-
-    #a2 {}
   </style>
 </head>
 <script>
@@ -81,24 +91,24 @@
     <div class="jumbotron">
       <div class='text-center'>
         <br>
+
+        <h4 id="t"><br><br>대학생 여러분의 스타일에 맞춘 다이어리를 선택해 드릴게요.</h4>
+        <h1 id="tt" style= "font-weight:900">다이어리 MBTI</h1>
         <br>
-        <br>
-        <h4 id="t">대학생 여러분의 스타일에 맞춘 다이어리를 선택해 드릴게요.</h4>
-        <h1 id="tt">다이어리 MBTI</h1>
-        <br>
-        <h4 id="ttt" class="text-muted">두 선택지 중에서 당신의 선택을 골라주세요 !</h4>
+        <h4 id="tts" class="text-muted">두 선택지 중에서 당신의 선택을 골라주세요 !</h4>
+        <h2 id="ttt" style="font-weight:500"></h2>
         <h3 id="rt"></h3>
         <h4 id="rtt"></h4>
       </div>
 
       <div class="row">
-        <div class="jumbotron">
+        <div class="test">
           <div class="text-center" onclick="up();q();save(1);" style="background-color: #FFFFF0">
             <h3 id="a1">시작하기</h3>
           </div>
         </div>
 
-        <div class="jumbotron">
+        <div class="test">
           <div class="text-center" onclick="up();q();save(2);" style="background-color: #FFFFF0">
             <h3 id="a2"></h3>
           </div>
@@ -130,6 +140,7 @@
     if (a == 1) {
         document.getElementById("t").style.display = "none";
         document.getElementById("tt").style.display = "none";
+        document.getElementById("tts").style.display = "none";
         document.getElementById("ttt").innerHTML = "오늘은 불금! 다들 나오라는데, 일요일까지 과제가 있다. 어떡할까?"
         document.getElementById("a1").innerHTML = "토요일, 일요일에도 약속이 있는데. 오늘 해야지."
         document.getElementById("a2").innerHTML = "어떻게든 되겠지! 일단 놀고 생각해."
@@ -168,7 +179,7 @@
         document.getElementById("a1").innerHTML = "네~ 불러만 주세요 ㅎㅎ 바로 갈게요";
         document.getElementById("a2").innerHTML = "다음주 금요일 7시쯤에 이모네 북엇국 괜찮으세요??";
       } else if (a == 10) {
-        document.getElementById("ttt").innerHTML = "캠퍼스에서 길을 잃은 사랆이 도서관 위치를 묻는다."
+        document.getElementById("ttt").innerHTML = "캠퍼스에서 길을 잃은 사람이 도서관 위치를 묻는다."
         document.getElementById("a1").innerHTML = "앞으로 쭉 가시면 큰길 나오거든요? 쭉 올라가시면 금방 나와요!";
         document.getElementById("a2").innerHTML = "앞으로 300m쯤 가셔서 우회전하시고 100m정도 앞에보면 10시방향으로 건물 하나 나와요. 옆에 계단으로 올라가시면 돼요";
       } else if (a == 11) {
@@ -323,15 +334,21 @@
 
 
 
-
-
-  <address>
-    <div class="text-right">
-      <br>
-      <p>본 서비스의 저작권은 '다이어리 연구소-다연'에 있으며, 상업적 이용을 금합니다.</p>
-      <p>본 서비스의 공유 및 사용을 환영합니다.</p>
-    </div>
-  </address>
+  <!--footer-->
+  <style>
+    .footer {
+      background-color: #333;
+      color: #ccc;
+      margin-top:50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      font-size: 12px;
+    }
+  </style>
+  <div class="container-fluid text-center mt-5 mb-0 footer">
+    <h4 class="text-secondary">한다</h4>
+    <p>'다이어리 연구소, 다연'의 MBTI성향별 다이어리 추천 서비스, 한다</p>
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
