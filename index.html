@@ -141,7 +141,6 @@
     var s = 0;
     var t = 0;
     var j = 0;
-    const mbti = "";
   </script>
 
   <script>
@@ -339,10 +338,11 @@
       }
       const mbti = m1.concat(m2, m3, m4);
       console.log('mbti : ' + mbti);
-      test_result();
+      test_result(mbti);
     }
 
-    function test_result() {
+    function test_result(mbti) {
+      alert(mbti);
       document.getElementById("a").style.display = "none"; //on
       document.getElementById("result").style.display = ""; //on
       console.log('mbti : ' + mbti);
