@@ -118,7 +118,7 @@
       </div>
 
       //결과
-      <div id="result" style="display:none">
+      <div id="result" style="display:none; background-color: #FFF000">
         <br>
 
         <h1 id="r1" style="font-weight:700">MBTI결과 </h1>
@@ -314,6 +314,7 @@
 
     function test_mbti() {
       document.getElementById("question").style.display = "none";
+      document.getElementById("a1").style.display = "none";
       document.getElementById("a2").style.display = "none";
 
       if (e >= 2) {
@@ -342,12 +343,13 @@
     }
 
     function test_result() {
-      $("a").hide();
-      $("result").show();
-
-      document.getElementById("r1").style.display = ""; //on
+      document.getElementById("a").style.display = "none"; //on
+      document.getElementById("result").style.display = ""; //on
+      console.log('mbti : ' + mbti);
       document.getElementById("r1").innerHTML = mbti;
+      document.getElementById("r1").style.display = ""; //on
       document.getElementById("r2").style.display = ""; //on
+      document.getElementById("r3").style.display = ""; //on
 
       if (mbti == 'ESTJ') {
         document.getElementById("r2").innerHTML = "시험 일주일 남았는데 이미 1회독 끝난 학생";
