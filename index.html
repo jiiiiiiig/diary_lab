@@ -44,6 +44,7 @@
     }
     #result_bottom{
       margin: 20px;
+      margin-top: 30px;
     }
 
     /* PC (해상도 1024px)*/
@@ -119,7 +120,7 @@
         </div>
 
         <div class="test">
-          <div id="a2" class="text-center" onclick="up();test_ques();test_save(2);" style="background-color: #FFFFF0">
+          <div id="a2" class="text-center" onclick="up();test_ques();test_save(2);" style="background-color: #FFFFF0; display:none;">
             <h3 id="a2"></h3>
           </div>
         </div>
@@ -133,6 +134,7 @@
           <h4 id="r2" style="font-weight:500">MBTI별명</h4>
         </div>
         <div id="result_bottom">
+
           <h3 id="r3" style="font-weight:300; font-size:14px;">MBTI설명설명설명ㅁㄴㄻㄴㅇㄷㄻㄴㅇㄻㄴㅇㄻㄴㅇㄻㅇㄻㄴㅇ</h2>
         </div>
       </div>
@@ -159,9 +161,13 @@
 
     function test_ques() {
       if (a == 1) {
+        document.getElementById("a2").style.display = ""; //on
+
+
         document.getElementById("t1").style.display = "none";
         document.getElementById("t2").style.display = "none";
         document.getElementById("t3").style.display = "none";
+
         document.getElementById("question").innerHTML = "오늘은 불금! 다들 나오라는데, 일요일까지 과제가 있다. 어떡할까?"
         document.getElementById("a1").innerHTML = "토요일, 일요일에도 약속이 있는데. 오늘 해야지."
         document.getElementById("a2").innerHTML = "어떻게든 되겠지! 일단 놀고 생각해."
