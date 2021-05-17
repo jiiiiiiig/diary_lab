@@ -103,13 +103,13 @@
 
       <div class="row">
         <div class="test">
-          <div class="text-center" onclick="up();test_ques();test_save(1);" style="background-color: #FFFFF0">
+          <div id="a1" class="text-center" onclick="up();test_ques();test_save(1);" style="background-color: #FFFFF0">
             <h3 id="a1">시작하기</h3>
           </div>
         </div>
 
         <div class="test">
-          <div class="text-center" onclick="up();test_ques();test_save(2);" style="background-color: #FFFFF0">
+          <div id="a2" class="text-center" onclick="up();test_ques();test_save(2);" style="background-color: #FFFFF0">
             <h3 id="a2"></h3>
           </div>
         </div>
@@ -293,14 +293,14 @@
           console.log('E');
         }
       } else if (a == 14) {
-        test_result();
+        test_mbti();
       }
       console.log('e : ' + e + '/n s: ' + s + '/n s: ' + t + '/n j: ' + j)
     }
 
 
 
-    function test_result() {
+    function test_mbti() {
       document.getElementById("rt").style.display = "";
       document.getElementById("rtt").style.display = "";
       document.getElementById("question").style.display = "none";
@@ -327,8 +327,16 @@
       const mbti = m1.concat(m2, m3, m4);
       console.log('mbti : ' + mbti);
       //document.write(result);
+      document.getElementById("question").style.display = "none";
+      document.getElementById("question").style.display = "none";
+      document.getElementById("question").style.display = "none";
+      document.getElementById("question").style.display = "none";
+      test_result();
+    }
 
-
+    function test_result(){
+      $("a1").hide();
+      $("a2").hide();
 
     }
   </script>
