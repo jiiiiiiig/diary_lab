@@ -97,8 +97,7 @@
         <br>
         <h4 id="t3" class="text-muted">두 선택지 중에서 당신의 선택을 골라주세요 !</h4>
         <h2 id="question" style="font-weight:500"></h2>
-        <h3 id="rt"></h3>
-        <h4 id="rtt"></h4>
+
       </div>
 
       <div class="row">
@@ -139,9 +138,9 @@
 
     function test_ques() {
       if (a == 1) {
-        document.getElementById("t").style.display = "none";
-        document.getElementById("tt").style.display = "none";
-        document.getElementById("tts").style.display = "none";
+        document.getElementById("t1").style.display = "none";
+        document.getElementById("t2").style.display = "none";
+        document.getElementById("t3").style.display = "none";
         document.getElementById("question").innerHTML = "오늘은 불금! 다들 나오라는데, 일요일까지 과제가 있다. 어떡할까?"
         document.getElementById("a1").innerHTML = "토요일, 일요일에도 약속이 있는데. 오늘 해야지."
         document.getElementById("a2").innerHTML = "어떻게든 되겠지! 일단 놀고 생각해."
@@ -301,9 +300,9 @@
 
 
     function test_mbti() {
-      document.getElementById("rt").style.display = "";
-      document.getElementById("rtt").style.display = "";
       document.getElementById("question").style.display = "none";
+      document.getElementById("a2").style.display = "none";
+
       if (e >= 2) {
         var m1 = 'E'
       } else {
@@ -326,17 +325,17 @@
       }
       const mbti = m1.concat(m2, m3, m4);
       console.log('mbti : ' + mbti);
-      //document.write(result);
-      document.getElementById("question").style.display = "none";
-      document.getElementById("question").style.display = "none";
-      document.getElementById("question").style.display = "none";
-      document.getElementById("question").style.display = "none";
       test_result();
     }
 
     function test_result(){
       $("a1").hide();
       $("a2").hide();
+      document.getElementById("t2").style.display = ""; //on
+      document.getElementById("t2").innerHTML = mbti;
+      if (mbti='ESTJ'){
+        document.getElementById("a1").innerHTML = "설명입니다";
+      }
 
     }
   </script>
