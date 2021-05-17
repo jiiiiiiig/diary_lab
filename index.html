@@ -94,6 +94,7 @@
 
         <h4 id="t1"><br><br>대학생 여러분의 스타일에 맞춘 다이어리를 선택해 드릴게요.</h4>
         <h1 id="t2" style="font-weight:900">다이어리 MBTI</h1>
+        <h2 id="t22" style="display:none;"></h2>
         <br>
         <h4 id="t3" class="text-muted">두 선택지 중에서 당신의 선택을 골라주세요 !</h4>
         <h2 id="question" style="font-weight:500"></h2>
@@ -329,12 +330,14 @@
     }
 
     function test_result(){
-      $("a1").hide();
       $("a2").hide();
       document.getElementById("t2").style.display = ""; //on
       document.getElementById("t2").innerHTML = mbti;
+      document.getElementById("t22").style.display = ""; //on
+
       if (mbti='ESTJ'){
-        document.getElementById("a1").innerHTML = "설명입니다";
+        document.getElementById("t22").innerHTML = "시험 일주일 남았는데 이미 1회독 끝난 학생";
+        document.getElementById("a1").innerHTML = "일의 목표를 설정하고 지시하며, 비합리적이거나 일관성이 결여된 상황을 쉽게 파악하는 능력이 있어 결정권을 행사하는 역할을 선호하는 당신! 남들보다는 주도면밀하며 계획적으로 일을 진행하는 것에 강점이 있는 학생입니다. 저희 '다연‘의 'j형 다이어리’에는 당신이 계획한 일들을 효율적으로 끝맺음 지을 수 있도록 섬세하게 구성이 되어있답니다. 저희가 당신의 계획에 빠짐이 없도록 하는 든든한 방어막이 되어드리겠습니다 :)";
       }
 
     }
