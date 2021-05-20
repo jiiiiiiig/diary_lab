@@ -34,6 +34,10 @@
       background-color: '#FFFFF0'
     }
 
+    #thumbnail{
+      margin-left: 100px;
+      margin-right: 100px;
+    }
     /* PC (해상도 1024px)*/
     @media all and (min-width:1024px) {
       .jumbotron {
@@ -95,9 +99,9 @@
     <div class="jumbotron">
       <h1>'한다'의 다이어리를 구매해 보세요.</h1>
       <br>
-      <div class="text-center">
-        <div class="row">
-          <div class="col-sm-6 col-md-4">
+
+        <div class="row" id="thumbnail">
+          <div class="col-sm-6 col-md-6">
             <div class="thumbnail">
               <img src="image/thumbnail1.png" alt="간단형 패키지">
               <div class="caption">
@@ -109,7 +113,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-md-4">
+          <div class="col-sm-6 col-md-6">
             <div class="thumbnail">
               <img src="image/thumbnail1.png" alt="완전형 패키지">
               <div class="caption">
@@ -120,7 +124,7 @@
             </div>
           </div>
         </div>
-      </div>
+
     </div>
   </div>
 
