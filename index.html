@@ -160,63 +160,65 @@
     }
 
     function test_ques() {
+      var qu = document.getElementById("question")
+      var a1 = document.getElementById("a1")
+      var a2 = document.getElementById("a2")
+
       if (a == 1) {
-        document.getElementById("a2").style.display = ""; //on
-
-
+        a2.style.display = ""; //on
         document.getElementById("t1").style.display = "none";
         document.getElementById("t2").style.display = "none";
         document.getElementById("t3").style.display = "none";
 
-        document.getElementById("question").innerHTML = "오늘은 불금! 다들 나오라는데, 일요일까지 과제가 있다. 어떡할까?"
-        document.getElementById("a1").innerHTML = "토요일, 일요일에도 약속이 있는데. 오늘 해야지."
-        document.getElementById("a2").innerHTML = "어떻게든 되겠지! 일단 놀고 생각해."
-        document.getElementById("a1").style.display = ""; //on
-        document.getElementById("a2").style.display = ""; //on
+        qu.innerHTML = "오늘은 불금! 다들 나오라는데, 일요일까지 과제가 있다. 어떡할까?"
+        a1.innerHTML = "토요일, 일요일에도 약속이 있는데. 오늘 해야지."
+        a2.innerHTML = "어떻게든 되겠지! 일단 놀고 생각해."
+        a1.style.display = ""; //on
+        a2.style.display = ""; //on
       } else if (a == 2) {
-        document.getElementById("question").innerHTML = "어떤 교양을 들을까?"
-        document.getElementById("a1").innerHTML = "이미 꿀교양이라고 소문난 교양을 선택하자!"
-        document.getElementById("a2").innerHTML = "이 수업 괜찮아 보이는데? 내가 듣고 싶은 걸 들을래."
+        qu.innerHTML = "어떤 교양을 들을까?"
+        a1.innerHTML = "이미 꿀교양이라고 소문난 교양을 선택하자!"
+        a2.innerHTML = "이 수업 괜찮아 보이는데? 내가 듣고 싶은 걸 들을래."
       } else if (a == 3) {
-        document.getElementById("question").innerHTML = "동아리에 나에 대한 안좋은 소문이 돌았다."
-        document.getElementById("a1").innerHTML = "나 그런 적 없는데? 아니라고 하면 되지."
-        document.getElementById("a2").innerHTML = "다 내가 했다고 생각하겠지? 정말 속상해. 누가 나한테 이런 소리를.. 동아리 그만둬야하나. 자퇴할까. 아..."
+        qu.innerHTML = "동아리에 나에 대한 안좋은 소문이 돌았다."
+        a1.innerHTML = "나 그런 적 없는데? 아니라고 하면 되지."
+        a2.innerHTML = "다 내가 했다고 생각하겠지? 정말 속상해. 누가 나한테 이런 소리를.. 동아리 그만둬야하나. 자퇴할까. 아..."
       } else if (a == 4) {
-        document.getElementById("question").innerHTML = "후배가 내가 들었던 수업이 어땠냐고 물어본다. 어떻게 설명해줄까?"
-        document.getElementById("a1").innerHTML = "그 수업 교수님이 추가 점수를 주시는데 수업시간에 발표하고 질문 많이하는 사람들을 좋아하시더라고. 그리고 기말과제도 프로젝트로 진행되는데, 개개인별로 참여점수를 매겨."
-        document.getElementById("a2").innerHTML = "교수님이 전체적으로 수업 참여도를 중요하게 생각하시더라."
+        qu.innerHTML = "친구와 함께 왕십리 cgv에서 재밌는 영화를 보고 나왔다. 당신의 반응은?"
+        a1.innerHTML = "영화 재밌었다. 그래서 우리 밥은 뭐 먹을까? "
+        a2.innerHTML = "여운이 가시질 않네 ㅠㅠ. 영화 속에 또 어떤 비밀이 숨어있을까? 집 가는길에 유튜브로 영화해석 찾아봐야지."
       } else if (a == 5) {
-        document.getElementById("question").innerHTML = "마음에 드는 선배가 있는데. 어떻게 친해지지?"
-        document.getElementById("a1").innerHTML = "선배 교양 뭐 들어요? 오 이건 어떻게한거에요? 선배 알바경험 있어요? 오 저도 괜찮을까요?"
-        document.getElementById("a2").innerHTML = "우와 대박. 선배 멋있다~~ 아 진짜요? (웃음 웃음) "
+        qu.innerHTML = "마음에 드는 선배가 있는데. 어떻게 친해지지?"
+        a1.innerHTML = "질문공세를 퍼붓는다. <br/>ex) 선배 교양 뭐 들어요? 오 이건 어떻게한거에요? 선배 알바경험 있어요? 오 저도 괜찮을까요?"
+        a2.innerHTML = "리액션 기계가 된다. <br/>ex) 우와 대박. 선배 멋있다~~ 아 진짜요? (웃음 웃음) "
       } else if (a == 6) {
-        document.getElementById("question").innerHTML = "둘 중 한 명과 팀플을 해야한다면?"
-        document.getElementById("a1").innerHTML = "무뚝뚝하고 말걸기 어렵지만 일 시키면 누구보다 잘해오는 친구";
-        document.getElementById("a2").innerHTML = "열심히 하고 분위기를 화기애애하게 해주지만 일은 못하는 친구";
+        qu.innerHTML = "둘 중 한 명과 팀플을 해야한다면?"
+        a1.innerHTML = "무뚝뚝하고 말걸기 어렵지만 일 시키면 누구보다 잘해오는 친구";
+        a2.innerHTML = "열심히 하고 분위기를 화기애애하게 해주지만 일은 못하는 친구";
       } else if (a == 7) {
-        document.getElementById("question").innerHTML = "동기들과 떠나는 여행!! 나는 어떤 스타일일까?"
-        document.getElementById("a1").innerHTML = "첫째날 6시쯤 도착할거니까 일단 고기국수를 먹고, 7시 반까지 다연호텔 도착해서 짐 풀자. 그리고 9시전까지 한다시장 가서 회 사오고... 내가 표로 정리해올게!!";
-        document.getElementById("a2").innerHTML = "도착하면 슬슬 바다나 보고.. 끌리는 대로 가자!";
+        qu.innerHTML = "동기들과 떠나는 여행!! 나는 어떤 스타일일까?"
+        a1.innerHTML = "첫째날 6시쯤 도착할거니까 일단 고기국수를 먹고, 7시 반까지 다연호텔 도착해서 짐 풀자. 그리고 9시전까지 한다시장 가서 회 사오고... 내가 표로 정리해올게!!";
+        a2.innerHTML = "도착하면 슬슬 바다나 보고.. 끌리는 대로 가자!";
       } else if (a == 8) {
-        document.getElementById("question").innerHTML = "공강을 만들고 싶은데 친구들은 다 금공강이다. 수공강 시간표가 맘에 드는데, 혼자 들어야 해. 어떡하지?"
-        document.getElementById("a1").innerHTML = "내가 쉬고싶을 때 쉬기. 수공강 선호";
-        document.getElementById("a2").innerHTML = "남들 다 쉬는 날 쉬기. 금공강 선호";
+        qu.innerHTML = "공강을 만들고 싶은데 친구들은 다 금공강이다. 수공강 시간표가 맘에 드는데, 혼자 들어야 해. 어떡하지?"
+        a1.innerHTML = "내가 쉬고싶을 때 쉬기. 수공강 선호";
+        a2.innerHTML = "남들 다 쉬는 날 쉬기. 금공강 선호";
       } else if (a == 9) {
-        document.getElementById("question").innerHTML = "선배가 다음주에 술 사주시겠다고 한다."
-        document.getElementById("a1").innerHTML = "네~ 불러만 주세요 ㅎㅎ 바로 갈게요";
-        document.getElementById("a2").innerHTML = "다음주 금요일 7시쯤에 이모네 북엇국 괜찮으세요??";
-      } else if (a == 10) {
-        document.getElementById("question").innerHTML = "캠퍼스에서 길을 잃은 사람이 도서관 위치를 묻는다."
-        document.getElementById("a1").innerHTML = "앞으로 쭉 가시면 큰길 나오거든요? 쭉 올라가시면 금방 나와요!";
-        document.getElementById("a2").innerHTML = "앞으로 300m쯤 가셔서 우회전하시고 100m정도 앞에보면 10시방향으로 건물 하나 나와요. 옆에 계단으로 올라가시면 돼요";
+        qu.innerHTML = "둘중에 한 모임에만 참가할 수 있다. 어느 모임으로 갈까?"
+        a1.innerHTML = "친한 친구들 3명과의 저녁 약속";
+        a2.innerHTML = "우리 과 사람들 60명 오는 개강파티";
+        } else if (a == 10) {
+        qu.innerHTML = "친구가 전액장학금을 받게 된다면 어떨 것 같냐고 물어본다.";
+        a1.innerHTML = "전액장학금 받으면? 우선 100만원은 @#$%에 쓰고, 50만원으로 %#$하고, 나머지는 ...";
+        a2.innerHTML = "받아봤어야 알지 ㅎ";
       } else if (a == 11) {
-        document.getElementById("question").innerHTML = "시험을 망쳐서 우울해. 어떡하지?"
-        document.getElementById("a1").innerHTML = "집에서 맛있는 배달음식 시키고 내가 젤 좋아하는 예능 보면서 깔깔 웃어야지.";
-        document.getElementById("a2").innerHTML = "친구들 다 불러!! 술마시고 파티하고 밤새 놀자~~";
+        qu.innerHTML = "시험을 망쳐서 우울해. 어떡하지?"
+        a1.innerHTML = "집에서 맛있는 배달음식 시키고 내가 젤 좋아하는 예능 보면서 깔깔 웃어야지.";
+        a2.innerHTML = "친구들 다 불러!! 술마시고 파티하고 밤새 놀자~~";
       } else if (a == 12) {
-        document.getElementById("question").innerHTML = "둘중에 한 모임에만 참가할 수 있다. 어느 모임으로 갈까?"
-        document.getElementById("a1").innerHTML = "친한 친구들 3명과의 저녁 약속";
-        document.getElementById("a2").innerHTML = "우리 과 사람들 60명 오는 개강파티";
+        qu.innerHTML = "-	전 날 과음을 한 친구가 다음날 1교시에 수업에 나오지 않았다. 그 친구를 보며 드는 당신의 생각은?"
+        a1.innerHTML = "<img src=\"../image/12_1\" width=\"400px\" height=\"150px\">";
+        a2.innerHTML = "<img src=\"../image/12_2\" width=\"400px\" height=\"150px\">";
       }
     }
 
@@ -287,12 +289,12 @@
           console.log('E');
         }
       } else if (a == 10) {
-        console.log('J or P');
+        console.log('E or I');
         if (i == 1) {
-          console.log('P');
+          console.log('I');
         } else if (i == 2) {
-          j++;
-          console.log('J');
+          e++;
+          console.log('E');
         }
       } else if (a == 11) {
         console.log('S or N');
@@ -311,14 +313,17 @@
           console.log('E');
         }
       } else if (a == 13) {
-        console.log('E or I');
+        console.log('J or P');
         if (i == 1) {
-          console.log('I');
+          j++;
+          console.log('J');
         } else if (i == 2) {
-          e++;
-          console.log('E');
+          console.log('P');
         }
       } else if (a == 14) {
+        qu.style.display = "none";
+        a1.style.display = "none";
+        a2.style.display = "none";
         test_mbti();
       }
       console.log('e : ' + e + '/n s: ' + s + '/n s: ' + t + '/n j: ' + j)
@@ -327,9 +332,6 @@
 
 
     function test_mbti() {
-      document.getElementById("question").style.display = "none";
-      document.getElementById("a1").style.display = "none";
-      document.getElementById("a2").style.display = "none";
 
       if (e >= 2) {
         var m1 = 'E'
