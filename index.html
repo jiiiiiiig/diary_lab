@@ -48,7 +48,8 @@
     #result_top {
       margin: 10px;
     }
-    #result_bottom{
+
+    #result_bottom {
       margin: 20px;
       margin-top: 30px;
     }
@@ -109,7 +110,10 @@
     <div class="jumbotron">
       <div id="q" class='text-center'>
         <br>
-
+        <div id="progress" class="progress" style="display:none">
+          <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="12" style="width: 8.33%;">
+          </div>
+        </div>
         <h4 id="t1"><br><br>대학생 여러분의 스타일에 맞춘 다이어리를 선택해 드릴게요.</h4>
         <h1 id="t2" style="font-weight:900">다이어리 MBTI</h1>
         <br>
@@ -142,6 +146,7 @@
         <div id="result_bottom">
 
           <h3 id="r3" style="font-weight:300; font-size:18px;">MBTI설명설명설명ㅁㄴㄻㄴㅇㄷㄻㄴㅇㄻㄴㅇㄻㄴㅇㄻㅇㄻㄴㅇ</h2>
+
         </div>
       </div>
 
@@ -169,23 +174,29 @@
       var qu = document.getElementById("question")
       var a1 = document.getElementById("a1")
       var a2 = document.getElementById("a2")
+      var pr = document.getElementById("progress")
+      var pb = document.getElementById("progress-bar")
 
       if (a == 1) {
-        a2.style.display = ""; //on
+        pr.style.display = ""; //on
+        pb.style.width = "100%";
+
         document.getElementById("t1").style.display = "none";
         document.getElementById("t2").style.display = "none";
         document.getElementById("t3").style.display = "none";
 
-        qu.innerHTML = "오늘은 불금! 다들 나오라는데, 일요일까지 과제가 있다. 어떡할까?"
-        a1.innerHTML = "토요일, 일요일에도 약속이 있는데. 오늘 해야지."
-        a2.innerHTML = "어떻게든 되겠지! 일단 놀고 생각해."
+        qu.innerHTML = "오늘은 불금! 다들 나오라는데, 일요일까지 과제가 있다. 어떡할까?";
+        a1.innerHTML = "토요일, 일요일에도 약속이 있는데. 오늘 해야지.";
+        a2.innerHTML = "어떻게든 되겠지! 일단 놀고 생각해.";
         a1.style.display = ""; //on
         a2.style.display = ""; //on
       } else if (a == 2) {
-        qu.innerHTML = "어떤 교양을 들을까?"
-        a1.innerHTML = "이미 꿀교양이라고 소문난 교양을 선택하자!"
-        a2.innerHTML = "이 수업 괜찮아 보이는데? 내가 듣고 싶은 걸 들을래."
+        pb.style.width = "10%";
+        qu.innerHTML = "어떤 교양을 들을까?";
+        a1.innerHTML = "이미 꿀교양이라고 소문난 교양을 선택하자!";
+        a2.innerHTML = "이 수업 괜찮아 보이는데? 내가 듣고 싶은 걸 들을래.";
       } else if (a == 3) {
+        pb.style.width = "1%";
         qu.innerHTML = "동아리에 나에 대한 안좋은 소문이 돌았다."
         a1.innerHTML = "나 그런 적 없는데? 아니라고 하면 되지."
         a2.innerHTML = "다 내가 했다고 생각하겠지? 정말 속상해. 누가 나한테 이런 소리를.. 동아리 그만둬야하나. 자퇴할까. 아..."
@@ -374,7 +385,7 @@
       document.getElementById("a").style.display = "none"; //on
       document.getElementById("result").style.display = ""; //on
       console.log('mbti : ' + mbti);
-      var mimg = "<img src=\"image/"+mbti+".png\" width=\"500px\" height=\"auto\" >"
+      var mimg = "<img src=\"image/" + mbti + ".png\" width=\"500px\" height=\"auto\" >"
       r1.innerHTML = mimg;
       r1.style.display = ""; //on
       r2.style.display = ""; //on
@@ -412,13 +423,16 @@
         r3.innerHTML = "깊은 통찰력과 직관력으로 눈에 띄는 리더는 아니지만, 조용히 영향력을 미치는 당신! 창의적이고 신중하며 동정심, 배려심이 많고 온화하면서도 점잖은 학생입니다. 다만 대결, 분쟁, 싸움을 싫어하고 예민한 성격으로 인해 경쟁하며 일하는 환경에서는 많은 어려움을 느끼기도 합니다. 저희 '다연'의 'J형 다이어리'가 당신의 멘탈 수호자가 되어 드릴게요 :)";
       } else if (mbti == 'estp') {
         r2.innerHTML = "시험 전 날 음주를 즐기는 학생";
-        r3.innerHTML = "지금 이 테스트를 하는 당신! 혹시 오늘도 친구를 만나러 다녀오시진 않으셨나요? 이 외에도 운동을 하거나 음식을 먹으러 가는 등 다양한 활동 등을 즐기는 학생이네요. 또한 순간순간 뛰어난 순간판단력으로 문제를 곧잘 해결해요. 하지만 즉흥적인 면도 있어서 계획적인 삶이 어느 정도는 필요해보이네요. 저희 ‘다연’의 ‘P형 다이어리’를 통해 그 순간 필요한 것을 간단하게 기록해 다양한 활동을 하면서도 다가오는 프로젝트나 시험에 대비해보는 것은 어떨까요? :)";
+        r3.innerHTML =
+          "지금 이 테스트를 하는 당신! 혹시 오늘도 친구를 만나러 다녀오시진 않으셨나요? 이 외에도 운동을 하거나 음식을 먹으러 가는 등 다양한 활동 등을 즐기는 학생이네요. 또한 순간순간 뛰어난 순간판단력으로 문제를 곧잘 해결해요. 하지만 즉흥적인 면도 있어서 계획적인 삶이 어느 정도는 필요해보이네요. 저희 ‘다연’의 ‘P형 다이어리’를 통해 그 순간 필요한 것을 간단하게 기록해 다양한 활동을 하면서도 다가오는 프로젝트나 시험에 대비해보는 것은 어떨까요? :)";
       } else if (mbti == 'esfp') {
         r2.innerHTML = "시험도 안끝났는데 술 약속 잡는 학생";
-        r3.innerHTML = "친절하고 낙천적이며 주위 사람들에게 일어나는 일에 관심이 많고 사교적인 당신! 문제를 해결할 때도 자신의 직감을 믿고 능력을 신뢰하며 스스로 해결책을 찾으려고 노력하는 학생이군요. 자유롭고 개방적인 성향의 소유자인 만큼 지나친 규율이나 얽매이는 것에 거부감이 들 수도 있습니다. 그러다보니 장기적인 목표를 세우거나 미리 준비하는 것을 싫어하고 시간 관리에는 특히 어려움을 종종 겪으시진 않으신가요? 저희 ‘다연’의 'P형 다이어리‘는 구성에 있어 틀에 얽매이지 않으면서 동시에 효율적으로 당신의 시간을 관리할 수 있게 특화되어있답니다. 저희와 함께 이번 학기 친구와 학점 동시에 잡아보는 것은 어떠신가요? :)";
+        r3.innerHTML =
+          "친절하고 낙천적이며 주위 사람들에게 일어나는 일에 관심이 많고 사교적인 당신! 문제를 해결할 때도 자신의 직감을 믿고 능력을 신뢰하며 스스로 해결책을 찾으려고 노력하는 학생이군요. 자유롭고 개방적인 성향의 소유자인 만큼 지나친 규율이나 얽매이는 것에 거부감이 들 수도 있습니다. 그러다보니 장기적인 목표를 세우거나 미리 준비하는 것을 싫어하고 시간 관리에는 특히 어려움을 종종 겪으시진 않으신가요? 저희 ‘다연’의 'P형 다이어리‘는 구성에 있어 틀에 얽매이지 않으면서 동시에 효율적으로 당신의 시간을 관리할 수 있게 특화되어있답니다. 저희와 함께 이번 학기 친구와 학점 동시에 잡아보는 것은 어떠신가요? :)";
       } else if (mbti == 'entp') {
         r2.innerHTML = "과탑은 아닌데 교수님한테 질문 많이 하는 학생";
-        r3.innerHTML = "매번 수업이 끝나면 교수님께 질문하러 가진 않으신가요? 꼭 그렇진 않더라도 머릿속에는 이미 호기심으로 가득 찬 당신! 과제를 하거나 공부를 하는데 있어 여러 가지 대안이나 방법들을 찾아보는 걸 좋아하기도 하네요. 풍부한 상상력으로 당신의 머릿 속에 가득찬 호기심을 밖으로 끄집어내보는 건 어떠신가요? 저희 ‘다연’의 ‘P형 다이어리’에 당신의 생각들을 녹여낸다면 공부를 하거나 프로젝트를 하는데 있어 효과적으로 진행할 수 있을거에요 :)";
+        r3.innerHTML =
+          "매번 수업이 끝나면 교수님께 질문하러 가진 않으신가요? 꼭 그렇진 않더라도 머릿속에는 이미 호기심으로 가득 찬 당신! 과제를 하거나 공부를 하는데 있어 여러 가지 대안이나 방법들을 찾아보는 걸 좋아하기도 하네요. 풍부한 상상력으로 당신의 머릿 속에 가득찬 호기심을 밖으로 끄집어내보는 건 어떠신가요? 저희 ‘다연’의 ‘P형 다이어리’에 당신의 생각들을 녹여낸다면 공부를 하거나 프로젝트를 하는데 있어 효과적으로 진행할 수 있을거에요 :)";
       } else if (mbti == 'enfp') {
         r2.innerHTML = "처음 본 옆자리 사람한테 과제 물어보는 학생";
         r3.innerHTML = "세상에는 흥미로운 것들이 너무 많아 반복되는 일상을 지겨워하는 당신! 하지만 풍부한 상상력을 기반으로 즉흥적으로 재빠르게 문제를 해결해나가는 학생이네요. 자유로운 영혼의 소유자인 당신을 위해 틀에 얽매이지 않은 ‘다연’의 ‘P형 다이어리’가 당신의 상상력에 날개를 펼쳐드립니다 :)";
