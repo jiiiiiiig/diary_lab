@@ -23,6 +23,16 @@
       padding: 10px;
     }
 
+    .img1 {
+      width: auto;
+      max-width: 300px;
+      height: auto;
+    }
+    .img2 {
+        width: auto;
+        max-width: 350px;
+        height: auto;
+      }
     #progress {
       margin-left:30px;
       margin-right:30px;
@@ -258,8 +268,8 @@
       } else if (a == 12) {
         pb.style.width = "91.66%";
         qu.innerHTML = "전 날 과음을 한 친구가 다음날 1교시에 수업에 나오지 않았다. 그 친구를 보며 드는 당신의 생각은?"
-        a1.innerHTML = "<img src=\"image/12_1.png\" onclick=\"up();test_ques();test_save(1);\" width=\"300px\" height=\"auto\" >";
-        a2.innerHTML = "<img src=\"image/12_2.png\" onclick=\"up();test_ques();test_save(2);\" width=\"350px\" height=\"auto\" >";
+        a1.innerHTML = "<img class="img1" src=\"image/12_1.png\" onclick=\"up();test_ques();test_save(1);\" >";
+        a2.innerHTML = "<img class="img2" src=\"image/12_2.png\" onclick=\"up();test_ques();test_save(2);\" >";
       }
     }
 
@@ -434,7 +444,7 @@
       } else if (mbti == 'istj') {
         //img.innerHTML = "<img src=\"image/ist.png\" >";
         r2.innerHTML = "도서관 의자와 물아일체인 학생";
-        r3.innerHTML = "낯가림이 심한 당신! 차가워보인다는 말을 종종 듣지 않나요? 그렇지만 사실 누구보다 책임감이 강하고 성실한 학생입니다. 규칙과 기한을 항상 준수하여, 약속시간이나 과제 제출기한 등 매사에 지각을 하는 일도 없습니다. 집중력이 뛰어나고 신중한 당신에게 저희 '다연'의 'J형 다이어리'가 훌륭한 일정관리 서포터의 역할을 할 것 같네요:)!";
+        r3.innerHTML = "낯가림이 심한 당신! 차가워보인다는 말을 종종 듣지 않나요? 그렇지만 사실 누구보다 책임감이 강하고 성실한 학생입니다. 규칙과 기한을 항상 준수하여, 약속시간이나 과제 제출기한 등 매사에 지각을 하는 일도 없습니다. 집중력이 뛰어나고 신중한 당신에게 저희 '다연'의 <b>'J형 다이어리'</b>가 훌륭한 일정관리 서포터의 역할을 할 것 같네요:)!";
       } else if (mbti == 'isfj') {
         r2.innerHTML = "항상 반에서 반장 맡는 학생";
         r3.innerHTML = "스스로의 의무에 헌신적이고 꾸준히 이를 실현해 나가고자 하는 당신! 이 뿐만 아니라 타인 특히, 본인에게 중요한 사람들의 감정에 관심이 많고 그들과 관련된 구체적인 것을 잘 알아차리고 기억합니다. 조용하지만 다정하고, 성실하며 책임감이 강한 팔방미인인 학생입니다. 저희 '다연'의 'J형 다이어리'가 당신의 수고로움을 한층 덜어드릴게요 :)";
