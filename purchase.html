@@ -34,15 +34,17 @@
     }
 
 
+
     /* PC (해상도 1024px)*/
     @media all and (min-width:1024px) {
       .jumbotron {
         margin: 30px;
         margin-top: 100px;
       }
-      #thumbnail{
-        margin-left: 100px;
-        margin-right: 100px;
+
+      #thumbnail {
+        margin-left: 80px;
+        margin-right: 80px;
       }
     }
 
@@ -52,9 +54,14 @@
         margin: 15px;
         margin-top: 70px;
       }
-      #thumbnail{
-        margin-left: 80px;
-        margin-right: 80px;
+
+      #title{
+        margin:30px;
+      }
+
+      #thumbnail {
+        margin-left: 30px;
+        margin-right: 30px;
       }
     }
 
@@ -64,9 +71,28 @@
         margin: 5px;
         margin-top: 70px;
       }
-      #thumbnail{
-        margin-left: 0px;
-        margin-right: 0px;
+      #title{
+        margin:10px;
+      }
+
+      #thumbnail {
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+    }
+    /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+    @media all and (max-width:480px) {
+      .jumbotron {
+        margin: 5px;
+        margin-top: 70px;
+      }
+      #title{
+        margin:10px;
+      }
+
+      #thumbnail {
+        margin-left: 10px;
+        margin-right: 10px;
       }
     }
 
@@ -105,33 +131,35 @@
   <!--purchase-->
   <div class="container">
     <div class="jumbotron">
-      <h1>'다연'의 첫번째 다이어리를 구매해 보세요.</h1>
+      <div id="title">
+        <h1>'다연'의 첫번째 다이어리를 구매해 보세요.</h1>
+      </div>
       <br>
 
-        <div class="row" id="thumbnail">
-          <div class="col-sm-6 col-md-6">
-            <div class="thumbnail">
-              <img src="image/thumbnail1.png" alt="풀버전">
-              <div class="caption">
-                <h3>Full ver. (J형)</h3>
-                <p>다연의 모든 페이지들이 포함되어있는 꼼꼼형 패키지!!</p>
+      <div class="row" id="thumbnail">
+        <div class="col-sm-6 col-md-6">
+          <div class="thumbnail">
+            <img src="image/thumbnail1.png" alt="풀버전">
+            <div class="caption">
+              <h3>Full ver. (J형)</h3>
+              <p>다연의 모든 페이지들이 포함되어있는 꼼꼼형 패키지!!</p>
 
-                <p style="text-align:right"><a href="https://forms.gle/RayZj4yUamCYJmmT9" class="btn btn-primary" role="button">구매하기</a></p>
+              <p style="text-align:right"><a href="https://forms.gle/RayZj4yUamCYJmmT9" class="btn btn-primary" role="button">구매하기</a></p>
 
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-6">
-            <div class="thumbnail">
-              <img src="image/thumbnail1.png" alt="심플버전">
-              <div class="caption">
-                <h3>Simple ver. (P형)</h3>
-                <p>꼭 필요한 페이지들이 포함되어있는 심플형 패키지!!</p>
-                <p style="text-align:right"><a href="https://forms.gle/RayZj4yUamCYJmmT9" class="btn btn-primary" role="button">구매하기</a></p>
-              </div>
             </div>
           </div>
         </div>
+        <div class="col-sm-6 col-md-6">
+          <div class="thumbnail">
+            <img src="image/thumbnail1.png" alt="심플버전">
+            <div class="caption">
+              <h3>Simple ver. (P형)</h3>
+              <p>꼭 필요한 페이지들이 포함되어있는 심플형 패키지!!</p>
+              <p style="text-align:right"><a href="https://forms.gle/RayZj4yUamCYJmmT9" class="btn btn-primary" role="button">구매하기</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>
