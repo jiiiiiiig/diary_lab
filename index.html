@@ -28,14 +28,22 @@
       max-width: 300px;
       height: auto;
     }
+
     .i2 {
-        width: 100%;
-        max-width: 350px;
-        height: auto;
-      }
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+    }
+
+    .i3 {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+    }
+
     #progress {
-      margin-left:30px;
-      margin-right:30px;
+      margin-left: 30px;
+      margin-right: 30px;
     }
 
     #a1 {
@@ -79,9 +87,10 @@
       .test {
         margin: 40px;
       }
+
       #progress {
-        margin-left:100px;
-        margin-right:100px;
+        margin-left: 100px;
+        margin-right: 100px;
       }
     }
 
@@ -91,9 +100,10 @@
         margin: 15px;
         margin-top: 70px;
       }
+
       #progress {
-        margin-left:70px;
-        margin-right:70px;
+        margin-left: 70px;
+        margin-right: 70px;
       }
     }
 
@@ -171,7 +181,7 @@
         <div id="result_bottom">
 
           <h3 id="r3" style="font-weight:300; font-size:18px;">MBTI설명설명설명ㅁㄴㄻㄴㅇㄷㄻㄴㅇㄻㄴㅇㄻㄴㅇㄻㅇㄻㄴㅇ</h2>
-          <p style="text-align:right"><a href="purchase.html" class="btn btn-primary" role="button">구매하기</a></p>
+            <p style="text-align:right"><a href="purchase.html" class="btn btn-primary" role="button">구매하기</a></p>
 
         </div>
       </div>
@@ -419,7 +429,7 @@
       document.getElementById("a").style.display = "none"; //on
       document.getElementById("result").style.display = ""; //on
       console.log('mbti : ' + mbti);
-      var mimg = "<img src=\"image/" + mbti + ".png\" width=\"500px\" height=\"auto\" >"
+      var mimg = "<img class='i3' src=\"image/" + mbti + ".png\" width=\"500px\" height=\"auto\" >"
       r1.innerHTML = mimg;
       r1.style.display = ""; //on
       r2.style.display = ""; //on
