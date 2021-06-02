@@ -37,7 +37,10 @@
 
     .title {
       font-size: 50px;
-      margin: 120px;
+      margin-top: 200px;
+      margin-bottom: 130px;
+      margin-left: 100px;
+      margin-right: 100px;
       text-align: center;
     }
 
@@ -61,22 +64,32 @@
 
     /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
     @media all and (min-width:768px) and (max-width:1023px) {
-
+      h1 {
+        font-size: 60px;
+      }
     }
 
     /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
     @media all and (max-width:767px) {
       .title {
+        margin-top:200px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      h1 {
+        font-size: 50px;
+      }
+    }
+    /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+    @media all and (max-width:480px) {
+      .title {
+        margin-top:150px;
         margin-left: 10px;
         margin-right: 10px;
       }
       h1 {
         font-size: 40px;
       }
-    }
-    /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
-    @media all and (max-width:480px) {
-
     }
   </style>
 </head>
@@ -88,7 +101,7 @@
       <h1>다이어리 연구소, 다연</h1>
     </div>
     <div class="content">
-      <a class="button" href="test.html">대학생 성향 테스트하기</a><br>
+      <a class="button" href="test.html">대학생 성향 테스트하기</a><br><br>
       <a class="button" href="purchase.html">다이어리 바로 구매하기</a>
     </div>
   </div>
